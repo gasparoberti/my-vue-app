@@ -1,0 +1,18 @@
+Comments 
+
+This lines made the same action:
+
+<a v-for="period of periods" :key="period" v-on:click="selectPeriod(period)">
+
+<a v-for="period of periods" :key="period" @click="selectPeriod(period)"
+
+------------
+
+Inside of template is not necesary write selectedPeriod.value = period
+
+<template>
+    <nav class="is-primary panel">
+        {{ selectedPeriod }}    //inside of template acceded automatically to the value
+
+------------
+

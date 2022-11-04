@@ -15,8 +15,8 @@ function selectPeriod(period: string) {
     <nav class="is-primary panel">
         {{ selectedPeriod }}
         <span class="panel-tabs">
-            <a v-for="period of periods" :key="period" v-on:click="selectPeriod(period)">
-                <!--el v-on:click es lo mismo que @click="selectPeriod(period)" -->
+            <a v-for="period of periods" :key="period" v-bind:class="{ 'is-active': period === selectedPeriod }"
+                v-on:click="selectPeriod(period)">
                 {{ period }}
             </a>
         </span>
